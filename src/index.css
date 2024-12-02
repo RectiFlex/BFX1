@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  @apply bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white;
+  min-height: 100vh;
+}
+
+.glass {
+  @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl;
+}
+
+.glass-hover {
+  @apply transition-all duration-300 hover:bg-white/15 hover:border-white/30;
+}
+
+.nav-item {
+  @apply flex items-center gap-3 px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-all cursor-pointer;
+}
+
+.nav-item.active {
+  @apply bg-white/15 text-white;
+}
